@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-text.svg" width="80" alt="Resume Builder Logo" />
-
 # ✨ Resume Builder
 
 ### AI-Powered Resume Creation Platform
