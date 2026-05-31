@@ -9,7 +9,7 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://mongodb.com)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com)
+[![Gemini](https://img.shields.io/badge/Google-Gemini_AI-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 
@@ -27,7 +27,7 @@
 
 | Feature | Description |
 |---|---|
-| 🤖 **AI Content Enhancement** | Automatically improve your professional summary and job descriptions using OpenAI GPT |
+| 🤖 **AI Content Enhancement** | Automatically improve your professional summary and job descriptions using Google Gemini AI |
 | 📄 **PDF Resume Upload** | Upload an existing PDF resume and let AI parse and populate your data instantly |
 | 🎨 **Multiple Templates** | Choose from Classic, Modern, Minimal, and Minimal-Image resume layouts |
 | 🎨 **Color Customization** | Personalize your resume's color scheme with an in-built color picker |
@@ -54,7 +54,7 @@
 ### Backend (`/server`)
 - **Node.js + Express 5** — REST API server
 - **MongoDB + Mongoose** — Database & ODM
-- **OpenAI SDK** — AI content enhancement & resume parsing
+- **Google Gemini AI** (via OpenAI-compatible SDK) — AI content enhancement & resume parsing
 - **ImageKit** — Image storage & CDN
 - **Multer** — File upload handling
 - **JWT + bcrypt** — Authentication & password hashing
@@ -96,7 +96,7 @@ Resume_builder/
 │
 └── server/                     # Express backend
     ├── configs/
-    │   ├── AI.js               # OpenAI client setup
+    │   ├── AI.js               # Gemini AI client setup (OpenAI-compatible SDK)
     │   ├── db.js               # MongoDB connection
     │   ├── imageKit.js         # ImageKit configuration
     │   └── multer.js           # File upload config
@@ -124,7 +124,7 @@ Resume_builder/
 
 - Node.js `v18+`
 - MongoDB (local or [MongoDB Atlas](https://www.mongodb.com/atlas))
-- [OpenAI API key](https://platform.openai.com/)
+- [Google Gemini API key](https://ai.google.dev/)
 - [ImageKit account](https://imagekit.io/)
 
 ---
@@ -152,8 +152,9 @@ PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 
-OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4o-mini
+GEMINI_API_KEY=your_gemini_api_key
+OPEN_AI_BASEURL=https://generativelanguage.googleapis.com/v1beta/openai/
+OPENAI_MODEL=gemini-2.0-flash
 
 IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
