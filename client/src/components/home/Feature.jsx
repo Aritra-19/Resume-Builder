@@ -5,11 +5,11 @@ const Feature = () => {
   const [isHover, setIsHover] = React.useState(false);
   return (
     <div id="features" className="flex flex-col items-center my-10 scroll-m-12">
-      <div className="flex items-center gap-2 text-sm text-blue-800 bg-blue-400/10 rounded-full px-6 py-1.5">
+      <div className="flex items-center gap-2 text-sm text-blue-800 bg-blue-400/10 rounded-full px-6 py-1.5 mb-2">
         <Zap />
         <span>Simple Process</span>
       </div>
-      <Title title='Build your resume' description=''/>
+      <Title title='Build your resume' description='Create a professional resume in minutes with AI-powered assistance, beautiful templates, and easy customization'/>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <img
           className="max-w-2xl w-full xl:-ml-32"
@@ -46,10 +46,10 @@ const Feature = () => {
               </svg>
               <div className="space-y-2">
                 <h3 className="text-base font-semibold text-slate-700">
-                  Real-Time Analytics
+                  AI-Powered Assistance
                 </h3>
                 <p className="text-sm text-slate-600 max-w-xs">
-                  Get instant insights into your finances with live dashboards.
+                  Get AI-enhanced summaries, improved descriptions, and content suggestions to stand out.
                 </p>
               </div>
             </div>
@@ -73,10 +73,10 @@ const Feature = () => {
               </svg>
               <div className="space-y-2">
                 <h3 className="text-base font-semibold text-slate-700">
-                  Bank-Grade Security
+                  Multiple Templates
                 </h3>
                 <p className="text-sm text-slate-600 max-w-xs">
-                  End-to-end encryption, 2FA, compliance with GDPR standards.
+                  Choose from modern, classic, and minimal templates to match your style.
                 </p>
               </div>
             </div>
@@ -101,11 +101,10 @@ const Feature = () => {
               </svg>
               <div className="space-y-2">
                 <h3 className="text-base font-semibold text-slate-700">
-                  Customizable Reports
+                  Easy Export & Download
                 </h3>
                 <p className="text-sm text-slate-600 max-w-xs">
-                  Export professional, audit-ready financial reports for tax or
-                  internal review.
+                  Download your professional resume as PDF, ready to share with employers.
                 </p>
               </div>
             </div>

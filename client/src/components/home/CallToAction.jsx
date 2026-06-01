@@ -11,7 +11,8 @@ const CallToAction = () => {
           Build a Professional Resume That Helps You Stand Out and Get Hired
         </p>
         <a
-          href="https://Github.com"
+          href="https://github.com/Aritra-19/Resume-Builder.git"
+          target="_blank"
           className="flex items-center gap-2 rounded py-3 px-8 bg-indigo-600 hover:bg-indigo-700 transition text-white"
         >
           <span>Star On Github</span>

@@ -97,7 +97,7 @@ const Dashboard = () => {
     <div>
       <div className="max-w-7xl mx-auto px-4 py-8">
         <p className="text-2xl font-medium mb-6 bg-gradient-to-r from-slate-600 to-slate-700 bg-clip-text text-transparent sm:hidden">
-          Welcome, Joe Doe
+          Welcome, {user?.name || "Guest"}
         </p>
 
         <div className="flex gap-4 ">
@@ -160,7 +160,7 @@ const Dashboard = () => {
                   className="absolute bottom-1 text-[11px] text-slate-400 group-hover: text-slate-600 transition-all duration-300 px-2 text-center"
                   style={{ color: baseColor + "90" }}
                 >
-                  Updated on {new Date(resume.updateAt).toLocaleDateString()}
+                  Updated on {resume.updatedAt ? new Date(resume.updatedAt).toLocaleDateString() : 'N/A'}
                 </p>
                 <div 
                   onClick={(e) => e.stopPropagation()}

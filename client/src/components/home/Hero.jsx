@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   const { user } = useSelector((state) => state.auth);
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const demoVideoUrl = "https://www.example.com/demo-video";
 
   const companiesLogo = [
     {
@@ -114,7 +115,7 @@ const Hero = () => {
       <div className="min-h-screen pb-20">
         {/* Navbar */}
         <nav className="z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-40 text-sm">
-          <a href="https://prebuiltui.com">
+          <a href="/">
             <img src="/logo.svg" alt="logo" className="h-11 w-auto" />
           </a>
 
@@ -124,12 +125,6 @@ const Hero = () => {
             </a>
             <a href="#features" className="hover:text-indigo-600 transition">
               Features
-            </a>
-            <a
-              href="#testimonials"
-              className="hover:text-indigo-600 transition"
-            >
-              Testimonials
             </a>
             <a href="#cta" className="hover:text-indigo-600 transition">
               Contact
@@ -153,6 +148,7 @@ const Hero = () => {
             </Link>
             <Link
               hidden={!user}
+              to="/app"
               className="hidden md:block px-8 py-2 bg-indigo-500 hover:bg-indigo-700 active:scale-95 transition-all rounded-full text-white"
             >
               Dashboard
@@ -190,6 +186,11 @@ const Hero = () => {
           <a href="#contact" className="text-white">
             Contact
           </a>
+          {user && (
+            <Link to="/app" className="text-white font-semibold">
+              Dashboard
+            </Link>
+          )}
           <button
             onClick={() => setMenuOpen(false)}
             className="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md flex"
@@ -297,7 +298,12 @@ const Hero = () => {
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
             </Link>
-            <button className="flex items-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700">
+            <a
+              href={demoVideoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -314,8 +320,8 @@ const Hero = () => {
                 <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path>
                 <rect x="2" y="6" width="14" height="12" rx="2"></rect>
               </svg>
-              <span>Try demo</span>
-            </button>
+              <span>Show demo</span>
+            </a>
           </div>
 
           <p className="py-6 text-slate-600 mt-14">

@@ -53,14 +53,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/" className="hover:text-indigo-600 transition">
-                  Careers
-                  <span className="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1">
-                    We’re hiring!
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/" className="hover:text-indigo-600 transition">
                   About
                 </a>
               </li>
@@ -176,7 +168,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-3 text-center">
-            © 2026 Resume Builder
+            © {new Date().getFullYear()} Resume Builder
           </p>
         </div>
       </footer>
