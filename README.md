@@ -185,7 +185,7 @@ npm install
 Create a `.env` file in `/client`:
 
 ```env
-VITE_BACKEND_URL=http://localhost:3000
+VITE_BASE_URL=http://localhost:3000
 ```
 
 Start the development server:
@@ -197,6 +197,18 @@ npm run dev
 The app will be live at `http://localhost:5173`
 
 ---
+
+## ☁️ Deploying to Vercel
+
+This repository contains separate frontend and backend applications. The root `vercel.json` configures Vercel to build and serve the Vite frontend from `/client`.
+
+Deploy the backend on a host that supports the Express server, then add this environment variable in the Vercel project settings before rebuilding:
+
+```env
+VITE_BASE_URL=https://your-backend-domain.example.com
+```
+
+Do not use `localhost` for the deployed frontend. The backend also needs its server environment variables configured, including `MONGODB_URI`, `JWT_SECRET`, `GEMINI_API_KEY`, `OPEN_AI_BASEURL`, and ImageKit settings.
 
 ## 🔌 API Endpoints
 
